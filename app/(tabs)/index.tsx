@@ -39,13 +39,15 @@ export default function Index() {
       setSelectedImage(result.assets[0].uri);
       setShowAppOptions(true);
     } else {
-      console.log("User cancelled image picker");
+      alert("You did not select any image.");
     }
   };
   const onReset = () => {
     setShowAppOptions(false);
   };
   const onAddSticker = () => {
+    // 重置之前的表情状态,否则会导致界面卡死无法操作
+    setPickedEmoji(undefined);
     setModalVisible(true);
   };
   const onModalClose = () => {
