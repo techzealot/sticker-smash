@@ -43,6 +43,9 @@ export default function Index() {
     }
   };
   const onReset = () => {
+    //重置所有新增状态
+    setSelectedImage(undefined);
+    setPickedEmoji(undefined);
     setShowAppOptions(false);
   };
   const onAddSticker = () => {

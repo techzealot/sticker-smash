@@ -34,8 +34,8 @@ export default function EmojiSticker({ imageSize, stickerSource }: Props) {
   });
   const containerStyle = useAnimatedStyle(() => ({
     transform: [
-      { translateX: withSpring(translateX.value) },
-      { translateY: withSpring(translateY.value) },
+      { translateX: translateX.value },
+      { translateY: translateY.value },
     ],
   }));
   return (
